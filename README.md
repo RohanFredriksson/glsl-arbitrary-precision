@@ -2,7 +2,7 @@
 An arbitrary-precision arithmetic library for the OpenGL Shading Language (GLSL)
 
 ```glsl
-void main() {
+vec3 mandelbrot() {
     
     uint c_r[ARRAY_SIZE];
     uint c_i[ARRAY_SIZE];
