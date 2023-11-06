@@ -27,7 +27,7 @@ float mandelbrot() {
         add(radius, tmp, radius);
         
         if (radius[1] > 4) {
-            float(k) / float(iterations);
+            return float(k) / float(iterations);
         }
         
         mul(z_i, z_i, nz_r);
