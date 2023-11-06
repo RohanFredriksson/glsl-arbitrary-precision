@@ -2,7 +2,7 @@
 An arbitrary-precision arithmetic library for the OpenGL Shading Language (GLSL)
 
 ```glsl
-vec3 mandelbrot() {
+float mandelbrot() {
     
     uint c_r[ARRAY_SIZE];
     uint c_i[ARRAY_SIZE];
@@ -27,7 +27,7 @@ vec3 mandelbrot() {
         add(radius, tmp, radius);
         
         if (radius[1] > 4) {
-            return vec3(1.0, 1.0, 1.0) * (float(k) / float(iterations));
+            float(k) / float(iterations);
         }
         
         mul(z_i, z_i, nz_r);
@@ -46,6 +46,6 @@ vec3 mandelbrot() {
         
     }
     
-    return vec3(0.0, 0.0, 0.0);
+    return 0.0;
 }
 ```
