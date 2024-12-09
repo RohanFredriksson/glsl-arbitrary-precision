@@ -49,3 +49,27 @@ float mandelbrot() {
     return 0.0;
 }
 ```
+
+### Encoding
+Numbers are encoded using an array of unsigned integers (uint) in the following format:
+### Sign (index 0):
+ - 0: The number is **non-negative**
+ - 1: The number is **negative**
+#### Whole Value (index 1):
+ - Represents the whole (integer) part of the number
+#### Fractional Values (indices 2, 3, ...):
+ - Each subsequent element represents fractional values that are 2^32 times smaller than the previous one.
+
+### Examples
+#### Positive Whole Number (e.g., 42):
+```csharp
+[0, 42]
+```
+#### Negative Decimal Number (e.g., -42.5):
+```csharp
+[1, 42, 2147483648] // 2147483648 represents 0.5 as 2^31 = 2147483648
+```
+#### Really Small Fractional Number (e.g., 5.42101086243e-20)
+```csharp
+[0, 0, 0, 1]
+```
