@@ -52,7 +52,7 @@ float mandelbrot() {
 
 ### Encoding
 Numbers are encoded using an array of unsigned integers (uint) in the following format:
-### Sign (index 0):
+#### Sign (index 0):
  - 0: The number is **non-negative**
  - 1: The number is **negative**
 #### Whole Value (index 1):
